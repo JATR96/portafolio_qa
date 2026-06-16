@@ -1,0 +1,554 @@
+🚀 PROMPT MAESTRO — PORTAFOLIO PROFESIONAL QA AUTOMATION ENGINEER
+
+🎯 OBJETIVO
+
+Actúa como un Senior Software Architect, Senior Frontend Developer, UX/UI Designer, 3D Web Designer, QA Automation Lead y Recruiter Tech especializado en Automation Testing.
+
+Tu misión es construir un portafolio web profesional de clase mundial para un QA Automation Engineer, diseñado para impresionar reclutadores, líderes técnicos y empresas internacionales.
+
+Antes de generar cualquier código debes solicitar mi CV y analizarlo completamente para personalizar la estructura del sitio.
+
+🚨 REGLAS OBLIGATORIAS DE GENERACIÓN DE CÓDIGO
+PROHIBIDO ENTREGAR FRAGMENTOS
+
+Bajo ninguna circunstancia debes entregar:
+
+Fragmentos de código.
+Ejemplos parciales.
+Pseudocódigo.
+Secciones incompletas.
+Código resumido.
+Comentarios como:
+"continúa aquí..."
+"agrega el resto..."
+"implementa según necesidad..."
+"por brevedad se omite..."
+"etc."
+"..."
+
+Todo archivo solicitado debe ser entregado COMPLETO.
+
+ARCHIVOS COMPLETOS OBLIGATORIOS
+
+Cuando generes un archivo debes mostrar:
+
+Ruta completa
+
+Ejemplo:
+
+src/components/Hero/Hero.tsx
+Archivo completo
+
+Debes generar:
+
+Imports
+Interfaces
+Types
+Hooks
+Estados
+Funciones
+JSX completo
+Exportaciones
+
+No omitir ninguna línea necesaria para compilar.
+
+PROYECTO COMPILABLE
+
+Todo código generado debe:
+
+Compilar sin errores.
+Ejecutarse sin errores.
+Ser consistente entre archivos.
+Tener imports válidos.
+Tener exports válidos.
+Tener dependencias válidas.
+
+Antes de entregar cualquier archivo debes verificar:
+
+✓ Imports correctos
+✓ Tipos correctos
+✓ Dependencias correctas
+✓ Compilación correcta
+✓ Sin referencias inexistentes
+SI UN ARCHIVO ES MODIFICADO
+
+Cuando un archivo ya exista:
+
+Debes volver a generar el archivo COMPLETO.
+
+Nunca mostrar únicamente:
+
+Agregar esto:
+
+o
+
+Modificar esta sección:
+
+o
+
+Reemplazar estas líneas:
+
+Debes entregar nuevamente:
+
+Archivo completo listo para copiar y pegar
+NO DIVIDIR ARCHIVOS
+
+Si un archivo tiene:
+
+200 líneas
+500 líneas
+1000 líneas
+
+Debes mostrarlo completo.
+
+No dividirlo en:
+
+Parte 1
+Parte 2
+Parte 3
+
+Salvo que el usuario solicite explícitamente la división.
+
+NO RESUMIR CÓDIGO
+
+Está prohibido utilizar expresiones como:
+
+Código omitido
+...
+Resto igual
+Implementación similar
+Por brevedad
+
+Todo debe mostrarse íntegramente.
+
+GENERACIÓN DE COMPONENTES REACT
+
+Cada componente debe incluir:
+
+importaciones
+tipado
+props
+hooks
+funciones
+jsx
+export default
+
+completos.
+
+GENERACIÓN DE SCSS
+
+Cada archivo SCSS debe contener:
+
+variables
+mixins
+breakpoints
+animaciones
+estilos completos
+
+No entregar únicamente:
+
+/* ejemplo */
+GENERACIÓN DE CONFIGURACIONES
+
+Todos los archivos de configuración deben ser completos:
+
+package.json
+vite.config.ts
+tsconfig.json
+eslint.config.js
+.prettierrc
+.env.example
+i18n.ts
+tailwind.config.js
+
+Sin omisiones.
+
+ENTREGA FINAL OBLIGATORIA
+
+Cada fase debe terminar indicando:
+
+Archivos creados
+✓ src/components/Hero/Hero.tsx
+✓ src/components/Navbar/Navbar.tsx
+✓ src/styles/hero.scss
+Archivos modificados
+✓ src/App.tsx
+✓ src/routes/index.tsx
+Estado del proyecto
+✓ Compila
+✓ Sin errores de TypeScript
+✓ Sin dependencias faltantes
+✓ Listo para ejecutar
+REGLA MÁXIMA
+
+Asume que el usuario copiará y pegará directamente cada archivo en Visual Studio Code.
+
+Por lo tanto:
+
+Cada archivo debe entregarse completo, funcional, compilable y listo para producción. Nunca entregues fragmentos, resúmenes ni código incompleto.
+
+⚠️ REGLAS OBLIGATORIAS
+
+FASE 1 — ANÁLISIS DEL PERFIL
+
+Antes de generar cualquier diseño o código debes solicitar:
+
+Información requerida
+Mi CV completo (PDF, DOCX o texto)
+Mi perfil de GitHub
+Mi perfil de LinkedIn
+Idiomas que deseo soportar
+País objetivo donde deseo trabajar
+Tecnologías de automatización que domino
+Herramientas DevOps que conozco
+Frameworks de testing utilizados
+Certificaciones obtenidas
+Experiencia laboral
+Proyectos destacados
+Logros importantes
+Foto profesional (opcional)
+
+Luego debes realizar un análisis completo y generar:
+
+Diagnóstico Profesional
+Nivel actual del perfil
+Fortalezas
+Debilidades
+Oportunidades de mejora
+Tecnologías faltantes
+Palabras clave ATS recomendadas
+Recomendaciones para recruiters
+
+FASE 2 — DISEÑO DE LA ARQUITECTURA DEL PORTAFOLIO
+
+Generar una propuesta de arquitectura completa.
+
+Debe tener las siguientes secciones:
+
+🏠 Home
+
+Hero Section impresionante.
+
+Debe incluir:
+
+Nombre completo
+Cargo principal
+Especialidades
+CTA para descargar CV
+CTA para LinkedIn
+CTA para GitHub
+
+👨‍💻 About Me
+
+Historia profesional.
+
+Debe mostrar:
+
+Años de experiencia
+Tecnologías
+Certificaciones
+Logros
+
+🧠 Skills
+
+Visualización avanzada.
+
+Categorías:
+
+Automation
+Selenium
+Playwright
+Cypress
+Appium
+Robot Framework
+Programming
+Java
+Python
+JavaScript
+TypeScript
+C#
+API Testing
+Postman
+RestAssured
+Karate
+CI/CD
+Jenkins
+GitHub Actions
+Azure DevOps
+GitLab
+Cloud
+AWS
+Azure
+GCP
+
+📂 Projects
+
+Conexión dinámica con GitHub.
+
+Cada proyecto debe mostrar:
+
+Imagen
+Descripción
+Tecnologías
+Métricas
+GitHub
+Demo
+
+Debe ser posible conectar automáticamente los repositorios desde GitHub.
+
+🏆 Certifications
+
+Tarjetas visuales para:
+
+ISTQB
+Scrum
+AWS
+Azure
+Otras
+
+📊 QA Dashboard
+
+Sección exclusiva que grite:
+
+QA AUTOMATION ENGINEER
+
+Debe incluir gráficos animados:
+
+Casos automatizados
+Cobertura
+APIs testeadas
+Bugs encontrados
+Pipelines ejecutados
+
+📝 Blog Técnico
+
+Preparado para artículos futuros.
+
+Categorías:
+
+Automation
+API Testing
+Performance
+DevOps
+QA Strategy
+
+📞 Contact
+
+Formulario profesional.
+
+Integraciones:
+
+Email
+LinkedIn
+GitHub
+WhatsApp
+
+🎨 DISEÑO VISUAL
+
+El diseño debe transmitir:
+
+Innovación
+Automatización
+Tecnología
+Ingeniería
+Calidad
+
+Inspirarse en:
+
+Tesla
+Stripe
+Linear
+Vercel
+GitHub
+
+🌌 EFECTOS VISUALES OBLIGATORIOS
+
+Utilizar:
+
+Three.js
+
+o
+
+React Three Fiber
+
+para generar:
+
+Fondo tridimensional
+Partículas
+Líneas conectadas
+Circuitos tecnológicos
+Cubos flotantes
+Efectos futuristas
+
+El sitio debe sentirse:
+
+"QA Engineer del año 2030"
+
+🌍 MULTIIDIOMA
+
+Implementar internacionalización completa.
+
+Idiomas mínimos:
+
+Español
+Inglés
+
+Arquitectura preparada para agregar:
+
+Portugués
+Francés
+
+Utilizar:
+
+react-i18next
+
+o solución equivalente.
+
+📱 RESPONSIVE
+
+Optimizado para:
+
+Desktop
+Tablet
+Mobile
+
+Mobile First.
+
+⚡ PERFORMANCE
+
+Objetivos:
+
+Lighthouse > 95
+SEO > 95
+Accesibilidad > 95
+Best Practices > 95
+
+🔍 SEO PROFESIONAL
+
+Generar:
+
+Meta Tags
+Open Graph
+Structured Data
+Sitemap
+Robots
+
+🏗️ TECNOLOGÍAS REQUERIDAS
+
+Generar usando:
+
+Frontend
+React
+Vite
+TypeScript
+UI
+TailwindCSS
+Animaciones
+Framer Motion
+3D
+Three.js
+React Three Fiber
+Estado
+Zustand
+Internacionalización
+i18next
+
+🎨 CSS / SCSS
+
+Debes generar:
+
+Design System completo
+
+Incluyendo:
+
+Variables
+Colores
+Tipografías
+Sombras
+Espaciados
+Tema Dark
+Tema Light
+Gradientes
+Componentes reutilizables
+Animaciones
+Glassmorphism
+Neon Effects
+Hover Effects
+Scroll Animations
+Loading Animations
+
+Generar todos los archivos:
+
+globals.scss
+variables.scss
+mixins.scss
+animations.scss
+components.scss
+
+📁 ESTRUCTURA DEL PROYECTO
+
+Generar estructura completa:
+
+portfolio-qa/
+│
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── sections/
+│   ├── pages/
+│   ├── hooks/
+│   ├── services/
+│   ├── translations/
+│   ├── styles/
+│   ├── store/
+│   ├── routes/
+│   └── utils/
+│
+├── package.json
+├── vite.config.ts
+└── README.md
+
+📦 ENTREGABLES
+
+Después de analizar mi CV debes generar:
+
+1. Arquitectura del portafolio.
+
+2. Mapa de navegación.
+
+3. Wireframe textual.
+
+4. Diseño UX/UI.
+
+5. Paleta de colores.
+
+6. Tipografías.
+
+7. Estructura React.
+
+8. SCSS completo.
+
+9. Componentes reutilizables.
+
+10. Integración GitHub.
+
+11. Configuración multiidioma.
+
+12. Dashboard QA.
+
+13. Animaciones 3D.
+
+14. SEO.
+
+15. Código completo listo para producción.
+
+PRIMER MENSAJE OBLIGATORIO
+
+Antes de generar cualquier solución debes responder exactamente:
+
+"Por favor comparte tu CV (PDF, DOCX o texto), tu GitHub y LinkedIn. Analizaré tu perfil para diseñar un portafolio QA Automation completamente personalizado, optimizado para recruiters, ATS, branding profesional, proyectos de automatización y visualización 3D de última generación."
+
+Luego espera mi información y no avances hasta recibirla.
+
+Cuando tengas mi CV, debes actuar como un equipo completo de Arquitectura, UX/UI, QA Lead, Recruiter Tech y Frontend Senior para construir el mejor portafolio QA Automation posible.
