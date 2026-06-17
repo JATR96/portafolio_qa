@@ -23,6 +23,10 @@ export default defineConfig({
         __dirname,
         './src/translations',
       ),
+      '@shared-types': path.resolve(
+        __dirname,
+        './src/types',
+      ),
     },
   },
 
