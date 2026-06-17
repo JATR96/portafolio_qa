@@ -1,13 +1,25 @@
-import { Route, Routes } from 'react-router-dom';
+import {
+  Navigate,
+  Route,
+  Routes,
+} from 'react-router-dom';
 
-import HomePage from '@pages/HomePage';
+import HomePage from '@pages/HomePage/HomePage';
 
-function AppRoutes(): React.JSX.Element {
+const AppRouter = (): React.JSX.Element => {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Route
+        path="/"
+        element={<HomePage />}
+      />
+
+      <Route
+        path="*"
+        element={<Navigate to="/" replace />}
+      />
     </Routes>
   );
-}
+};
 
-export default AppRoutes;
+export default AppRouter;
