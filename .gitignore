@@ -1,0 +1,45 @@
+# Node
+node_modules
+
+# PNPM
+.pnpm-store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Build
+dist
+build
+coverage
+
+# Vite
+vite.config.ts.timestamp-*
+
+# Env
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode
+.idea
+
+# Prisma
+backend/prisma/migrations
+
+# Docker
+docker-data
+
+# Cache
+.cache
+
+# Temporary
+tmp
+temp
