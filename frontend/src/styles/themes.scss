@@ -1,9 +1,21 @@
 [data-theme='dark'] {
-  --background: #050816;
-  --surface: #10172a;
+  --background: var(--dark-background);
+  --surface: var(--dark-surface);
+  --card: var(--dark-card);
+
+  --text-primary: var(--dark-text-primary);
+  --text-secondary: var(--dark-text-secondary);
+
+  --border-color: var(--dark-border);
 }
 
 [data-theme='light'] {
-  --background: #ffffff;
-  --surface: #f8fafc;
+  --background: var(--light-background);
+  --surface: var(--light-surface);
+  --card: var(--light-card);
+
+  --text-primary: var(--light-text-primary);
+  --text-secondary: var(--light-text-secondary);
+
+  --border-color: var(--light-border);
 }
