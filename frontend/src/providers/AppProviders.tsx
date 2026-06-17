@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 import { QueryProvider } from './QueryProvider';
-import { ThemeProvider } from './ThemeProvider';
+import ThemeProvider from './ThemeProvider';
 
 interface AppProvidersProps {
   children: ReactNode;

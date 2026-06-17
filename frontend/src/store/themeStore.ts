@@ -20,27 +20,18 @@ const useThemeStore = create<ThemeState>()(
     (set, get) => ({
       theme: 'dark',
 
-      setTheme: (theme) => {
-        document.documentElement.setAttribute(
-          'data-theme',
-          theme,
-        );
-
+      setTheme: (
+        theme: ThemeMode,
+      ) =>
         set({
           theme,
-        });
-      },
+        }),
 
       toggleTheme: () => {
         const nextTheme =
           get().theme === 'dark'
             ? 'light'
             : 'dark';
-
-        document.documentElement.setAttribute(
-          'data-theme',
-          nextTheme,
-        );
 
         set({
           theme: nextTheme,

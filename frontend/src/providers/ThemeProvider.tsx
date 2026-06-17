@@ -1,88 +1,26 @@
-import {
-  createContext,
-  ReactNode,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
+import { useEffect } from 'react';
 
-export type ThemeMode = 'dark' | 'light';
-
-interface ThemeContextValue {
-  theme: ThemeMode;
-  toggleTheme: () => void;
-}
-
-const ThemeContext = createContext<ThemeContextValue | null>(
-  null,
-);
+import useThemeStore from '../store/themeStore';
 
 interface ThemeProviderProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
-const STORAGE_KEY = 'portfolio-theme';
-
-export function ThemeProvider({
+const ThemeProvider = ({
   children,
-}: ThemeProviderProps): React.JSX.Element {
-  const [theme, setTheme] =
-    useState<ThemeMode>('dark');
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem(
-      STORAGE_KEY,
-    ) as ThemeMode | null;
-
-    if (savedTheme) {
-      setTheme(savedTheme);
-      return;
-    }
-
-    setTheme('dark');
-  }, []);
+}: ThemeProviderProps) => {
+  const theme = useThemeStore(
+    (state) => state.theme,
+  );
 
   useEffect(() => {
     document.documentElement.setAttribute(
       'data-theme',
       theme,
     );
-
-    localStorage.setItem(STORAGE_KEY, theme);
   }, [theme]);
 
-  const toggleTheme = (): void => {
-    setTheme((previousTheme) =>
-      previousTheme === 'dark'
-        ? 'light'
-        : 'dark',
-    );
-  };
+  return <>{children}</>;
+};
 
-  const value = useMemo(
-    () => ({
-      theme,
-      toggleTheme,
-    }),
-    [theme],
-  );
-
-  return (
-    <ThemeContext.Provider value={value}>
-      {children}
-    </ThemeContext.Provider>
-  );
-}
-
-export function useTheme(): ThemeContextValue {
-  const context = useContext(ThemeContext);
-
-  if (!context) {
-    throw new Error(
-      'useTheme must be used inside ThemeProvider',
-    );
-  }
-
-  return context;
-}
+export default ThemeProvider;
