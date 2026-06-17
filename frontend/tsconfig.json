@@ -24,19 +24,19 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@assets/*": ["src/assets/*"],
-      "@components/*": ["src/components/*"],
-      "@sections/*": ["src/sections/*"],
-      "@pages/*": ["src/pages/*"],
-      "@hooks/*": ["src/hooks/*"],
-      "@services/*": ["src/services/*"],
-      "@styles/*": ["src/styles/*"],
-      "@store/*": ["src/store/*"],
-      "@routes/*": ["src/routes/*"],
-      "@utils/*": ["src/utils/*"],
-      "@providers/*": ["src/providers/*"],
-      "@translations/*": ["src/translations/*"]
+      "@/*": ["./src/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@components/*": ["./src/components/*"],
+      "@sections/*": ["./src/sections/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@services/*": ["./src/services/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@store/*": ["./src/store/*"],
+      "@routes/*": ["./src/routes/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@providers/*": ["./src/providers/*"],
+      "@translations/*": ["./src/translations/*"]
     }
   },
   "include": [
