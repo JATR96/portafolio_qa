@@ -19,6 +19,9 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "types": [
+      "vite/client"
+    ],
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
@@ -32,11 +35,16 @@
       "@store/*": ["src/store/*"],
       "@routes/*": ["src/routes/*"],
       "@utils/*": ["src/utils/*"],
+      "@providers/*": ["src/providers/*"],
       "@translations/*": ["src/translations/*"]
     }
   },
   "include": [
     "src"
   ],
-  "references": []
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }

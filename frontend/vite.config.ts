@@ -18,24 +18,27 @@ export default defineConfig({
       '@store': path.resolve(__dirname, './src/store'),
       '@routes': path.resolve(__dirname, './src/routes'),
       '@utils': path.resolve(__dirname, './src/utils'),
-      '@translations': path.resolve(__dirname, './src/translations'
-      )
-    }
+      '@providers': path.resolve(__dirname, './src/providers'),
+      '@translations': path.resolve(
+        __dirname,
+        './src/translations',
+      ),
+    },
   },
 
   server: {
     port: 5173,
-    host: true
+    host: true,
   },
 
   preview: {
-    port: 4173
+    port: 4173,
   },
 
   build: {
     sourcemap: false,
     minify: 'esbuild',
     cssCodeSplit: true,
-    chunkSizeWarningLimit: 1000
-  }
+    chunkSizeWarningLimit: 1000,
+  },
 });
