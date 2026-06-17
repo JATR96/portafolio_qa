@@ -1,0 +1,55 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 2000;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition:
+    opacity var(--transition-normal),
+    visibility var(--transition-normal);
+}
+
+.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 320px;
+  max-width: 90vw;
+
+  height: 100%;
+
+  background: var(--background);
+
+  border-left: 1px solid var(--border-color);
+
+  padding: 2rem 1.5rem;
+}
+
+.closeButton {
+  display: flex;
+  margin-left: auto;
+
+  color: var(--text-primary);
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.25rem;
+
+  margin-top: 2rem;
+}
+
+.link {
+  font-size: 1rem;
+}
