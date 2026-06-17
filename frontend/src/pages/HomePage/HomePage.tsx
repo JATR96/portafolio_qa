@@ -1,23 +1,22 @@
 import styles from './HomePage.module.scss';
 
-const HomePage = (): React.JSX.Element => {
+const HomePage = () => {
   return (
-    <main className={styles.home}>
-      <div className={styles.content}>
+    <main
+      id="home"
+      className={styles.home}
+    >
+      <section className={styles.hero}>
         <h1 className={styles.title}>
-          QA Automation Portfolio
+          QA Automation Engineer
         </h1>
 
         <p className={styles.subtitle}>
-          Bootstrap Runtime Ready
+          Enterprise Testing,
+          Automation, Performance
+          and Quality Engineering
         </p>
-
-        <p className={styles.description}>
-          React 19 + TypeScript + Vite +
-          Zustand + React Query +
-          SCSS Modules.
-        </p>
-      </div>
+      </section>
     </main>
   );
 };

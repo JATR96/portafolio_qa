@@ -4,6 +4,7 @@ import { GitCompareArrows, Contact, Menu } from 'lucide-react';
 import { NAVIGATION_ITEMS } from '../../config/navigation';
 
 import MobileMenu from '../MobileMenu/MobileMenu';
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
 import styles from './Navbar.module.scss';
 
@@ -42,6 +43,7 @@ const Navbar = () => {
           </nav>
 
           <div className={styles.actions}>
+            <ThemeToggle />
             <a
               href="https://github.com/JATR96"
               target="_blank"

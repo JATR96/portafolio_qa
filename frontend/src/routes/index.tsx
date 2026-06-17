@@ -4,15 +4,19 @@ import {
   Routes,
 } from 'react-router-dom';
 
-import HomePage from '@pages/HomePage/HomePage';
+import AppLayout from '../layouts/AppLayout/AppLayout';
 
-const AppRouter = (): React.JSX.Element => {
+import HomePage from '../pages/HomePage/HomePage';
+
+const AppRouter = () => {
   return (
     <Routes>
-      <Route
-        path="/"
-        element={<HomePage />}
-      />
+      <Route element={<AppLayout />}>
+        <Route
+          path="/"
+          element={<HomePage />}
+        />
+      </Route>
 
       <Route
         path="*"
