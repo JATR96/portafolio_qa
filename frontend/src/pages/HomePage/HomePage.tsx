@@ -10,16 +10,22 @@ import Certifications from '@sections/Certifications/Certifications';
 
 import Contact from '@sections/Contact/Contact';
 
+import Footer from '@components/Footer/Footer';
+
 const HomePage = (): React.JSX.Element => {
   return (
-    <main>
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Certifications />
-      <Contact />
-    </main>
+    <>
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Certifications />
+        <Contact />
+      </main>
+
+      <Footer />
+    </>
   );
 };
 

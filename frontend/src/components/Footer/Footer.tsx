@@ -1,53 +1,76 @@
-import { GitCompareArrows, Contact, Mail } from 'lucide-react';
-
 import styles from './Footer.module.scss';
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
+const Footer = (): React.JSX.Element => {
+  const currentYear =
+    new Date().getFullYear();
 
   return (
-    <footer className={styles.footer}>
-      <div className={styles.container}>
-        <div className={styles.left}>
-          <h3 className={styles.title}>
-            Jesus Abel
+    <footer
+      className={styles.footer}
+    >
+      <div
+        className={styles.container}
+      >
+        <div
+          className={styles.brand}
+        >
+          <h3
+            className={styles.logo}
+          >
+            JATR QA
           </h3>
 
-          <p className={styles.description}>
+          <p
+            className={
+              styles.description
+            }
+          >
             QA Automation Engineer
+          </p>
+
+          <p
+            className={
+              styles.specialties
+            }
+          >
+            Automation • API Testing •
+            Performance
           </p>
         </div>
 
-        <div className={styles.socials}>
+        <div
+          className={styles.links}
+        >
           <a
             href="https://github.com/JATR96"
             target="_blank"
             rel="noreferrer"
-            aria-label="GitHub"
           >
-            <GitCompareArrows size={20} />
+            GitHub
           </a>
 
           <a
             href="https://www.linkedin.com/in/jesus-abel-t-a5b67b16a/"
             target="_blank"
             rel="noreferrer"
-            aria-label="LinkedIn"
           >
-            <Contact size={20} />
+            LinkedIn
           </a>
 
           <a
-            href="mailto:contact@example.com"
-            aria-label="Email"
+            href="mailto:jesus_tornero@outlook.com"
           >
-            <Mail size={20} />
+            Email
           </a>
         </div>
-      </div>
 
-      <div className={styles.bottom}>
-        © {currentYear} QA Automation Portfolio
+        <div
+          className={
+            styles.copyright
+          }
+        >
+          © {currentYear} JATR QA
+        </div>
       </div>
     </footer>
   );
