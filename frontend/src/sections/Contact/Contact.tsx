@@ -2,6 +2,8 @@ import { useTranslation } from 'react-i18next';
 
 import { contactLinks } from '@data/contact';
 
+import { motion } from 'framer-motion';
+
 import {
   fadeUp,
   staggerContainer,
@@ -21,43 +23,49 @@ const Contact =
         id="contact"
         className={styles.contact}
       >
-        <div
+        <motion.div
           className={styles.container}
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{
+            once: true,
+            amount: 0.2,
+          }}
         >
-          <h2
+          <motion.h2
             className={styles.title}
+            variants={fadeUp}
           >
             {t('contact.title')}
-          </h2>
+          </motion.h2>
 
-          <p
-            className={
-              styles.description
-            }
+          <motion.p
+            className={styles.description}
+            variants={fadeUp}
           >
             {t(
               'contact.description',
             )}
-          </p>
+          </motion.p>
 
-          <div
+          <motion.div
             className={styles.grid}
+            variants={staggerContainer}
           >
             {contactLinks.map(
               (contact) => (
-                <a
+                <motion.a
                   key={contact.id}
+                  variants={fadeUp}
                   href={contact.href}
                   target={
-                    contact.id !==
-                    'email'
+                    contact.id !== 'email'
                       ? '_blank'
                       : undefined
                   }
                   rel="noreferrer"
-                  className={
-                    styles.card
-                  }
+                  className={styles.card}
                 >
                   <h3>
                     {contact.label}
@@ -66,11 +74,11 @@ const Contact =
                   <p>
                     {contact.value}
                   </p>
-                </a>
+                </motion.a>
               ),
             )}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
     );
   };
