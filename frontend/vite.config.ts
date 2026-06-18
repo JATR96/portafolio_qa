@@ -31,6 +31,10 @@ export default defineConfig({
         __dirname,
         './src/config',
       ),
+      '@data': path.resolve(
+        __dirname,
+        './src/data',
+      ),
     },
   },
 

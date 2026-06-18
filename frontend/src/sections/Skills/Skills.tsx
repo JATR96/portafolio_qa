@@ -2,57 +2,14 @@ import { useTranslation } from 'react-i18next';
 
 import { motion } from 'framer-motion';
 
+import { skillGroups } from '@data/skills';
+
 import {
   fadeUp,
   staggerContainer,
 } from '../../config/animations';
 
 import styles from './Skills.module.scss';
-
-const skillGroups = [
-  {
-    title: 'QA Automation',
-    skills: [
-      'Playwright',
-      'Selenium',
-      'Cypress',
-    ],
-  },
-  {
-    title: 'API Testing',
-    skills: [
-      'Postman',
-      'REST Assured',
-      'Swagger',
-    ],
-  },
-  {
-    title: 'Performance',
-    skills: [
-      'JMeter',
-      'K6',
-      'Load Testing',
-    ],
-  },
-  {
-    title: 'Development',
-    skills: [
-      'Java',
-      'TypeScript',
-      'React',
-      'Node.js',
-    ],
-  },
-  {
-    title: 'DevOps',
-    skills: [
-      'Git',
-      'GitHub Actions',
-      'Docker',
-      'CI/CD',
-    ],
-  },
-];
 
 const Skills = (): React.JSX.Element => {
   const { t } =

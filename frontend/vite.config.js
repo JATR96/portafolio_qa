@@ -20,6 +20,7 @@ export default defineConfig({
             '@translations': path.resolve(__dirname, './src/translations'),
             '@shared-types': path.resolve(__dirname, './src/types'),
             '@config': path.resolve(__dirname, './src/config'),
+            '@data': path.resolve(__dirname, './src/data'),
         },
     },
     server: {
