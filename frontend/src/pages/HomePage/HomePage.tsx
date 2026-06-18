@@ -1,20 +1,37 @@
+import { useTranslation } from 'react-i18next';
+
 import styles from './HomePage.module.scss';
 
-const HomePage = () => {
+const HomePage = (): React.JSX.Element => {
+  const { t } =
+    useTranslation(
+      'homepage',
+    );
+
   return (
     <main
       id="home"
       className={styles.home}
     >
-      <section className={styles.hero}>
-        <h1 className={styles.title}>
-          QA Automation Engineer
+      <section
+        className={styles.hero}
+      >
+        <h1
+          className={styles.title}
+        >
+          {t(
+            'hero.title',
+          )}
         </h1>
 
-        <p className={styles.subtitle}>
-          Enterprise Testing,
-          Automation, Performance
-          and Quality Engineering
+        <p
+          className={
+            styles.subtitle
+          }
+        >
+          {t(
+            'hero.subtitle',
+          )}
         </p>
       </section>
     </main>
