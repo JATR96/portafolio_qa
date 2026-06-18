@@ -7,6 +7,8 @@ import App from './App';
 
 import { AppProviders } from './providers/AppProviders';
 
+import { HelmetProvider, } from 'react-helmet-async';
+
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/600.css';
 import '@fontsource/inter/700.css';
@@ -18,8 +20,10 @@ ReactDOM.createRoot(
   ) as HTMLElement,
 ).render(
   <React.StrictMode>
-    <AppProviders>
-      <App />
-    </AppProviders>
+    <HelmetProvider>
+      <AppProviders>
+        <App />
+      </AppProviders>
+    </HelmetProvider>
   </React.StrictMode>,
 );

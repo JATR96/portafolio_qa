@@ -12,9 +12,16 @@ import Contact from '@sections/Contact/Contact';
 
 import Footer from '@components/Footer/Footer';
 
+import SEO from '@components/SEO/SEO';
+
 const HomePage = (): React.JSX.Element => {
   return (
     <>
+      <SEO
+        title="JATR QA | QA Automation Engineer"
+        description="QA Automation Engineer especializado en Playwright, API Testing, Performance Testing y Quality Engineering."
+      />
+      
       <main>
         <Hero />
         <About />
