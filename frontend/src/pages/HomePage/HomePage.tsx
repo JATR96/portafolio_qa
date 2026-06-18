@@ -8,6 +8,8 @@ import Projects from '@sections/Projects/Projects';
 
 import Certifications from '@sections/Certifications/Certifications';
 
+import Contact from '@sections/Contact/Contact';
+
 const HomePage = (): React.JSX.Element => {
   return (
     <main>
@@ -16,6 +18,7 @@ const HomePage = (): React.JSX.Element => {
       <Skills />
       <Projects />
       <Certifications />
+      <Contact />
     </main>
   );
 };

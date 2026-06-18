@@ -34,5 +34,9 @@
   "certifications": {
     "title": "Certificaciones",
     "description": "Certificaciones y credenciales profesionales relacionadas con calidad de software, automatización y testing."
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "¿Interesado en colaborar o conversar sobre QA Automation, testing o desarrollo? Estoy disponible para nuevas oportunidades."
   }
 }
