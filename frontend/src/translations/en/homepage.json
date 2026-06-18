@@ -16,5 +16,9 @@
   "skills": {
     "title": "Technical Skills",
     "description": "Technologies and tools used for automation, testing, software quality and frontend development."
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Featured projects related to automation, testing and development."
   }
 }
