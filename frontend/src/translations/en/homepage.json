@@ -1,13 +1,16 @@
 {
-  "hero": {
-    "badge": "QA Automation Engineer",
-    "name": "Jesús Abel T.",
-    "description": "Specialist in Test Automation, Performance Testing and Enterprise Software Quality.",
-    "primaryButton": "View Projects",
-    "secondaryButton": "Contact Me",
+  "about": {
+    "title": "About Me",
 
-    "statOne": "QA Automation",
-    "statTwo": "Performance Testing",
-    "statThree": "Enterprise Quality"
+    "description": "QA Automation Engineer specialized in test automation, functional testing, performance testing and quality assurance for enterprise applications.",
+
+    "specialties": {
+      "one": "Test Automation",
+      "two": "API Testing",
+      "three": "Performance Testing",
+      "four": "Quality Engineering",
+      "five": "Agile QA",
+      "six": "CI/CD Testing"
+    }
   }
 }

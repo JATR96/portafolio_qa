@@ -1,0 +1,53 @@
+.about {
+  padding: 6rem 1.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  line-height: 1.8;
+  color:
+    var(--text-secondary);
+}
+
+.specialties {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(220px, 1fr)
+    );
+  gap: 1rem;
+}
+
+.card {
+  padding: 1.25rem;
+  border-radius:
+    var(--radius-md);
+  border: 1px solid
+    var(--border-color);
+  text-align: center;
+  transition:
+    transform
+    var(
+      --transition-normal
+    );
+}
+
+.card:hover {
+  transform:
+    translateY(-4px);
+}
