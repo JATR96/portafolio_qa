@@ -27,6 +27,10 @@ export default defineConfig({
         __dirname,
         './src/types',
       ),
+      '@config': path.resolve(
+        __dirname,
+        './src/config',
+      ),
     },
   },
 

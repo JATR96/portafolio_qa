@@ -19,6 +19,7 @@ export default defineConfig({
             '@providers': path.resolve(__dirname, './src/providers'),
             '@translations': path.resolve(__dirname, './src/translations'),
             '@shared-types': path.resolve(__dirname, './src/types'),
+            '@config': path.resolve(__dirname, './src/config'),
         },
     },
     server: {

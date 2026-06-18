@@ -37,7 +37,8 @@
       "@routes/*": ["./src/routes/*"],
       "@utils/*": ["./src/utils/*"],
       "@providers/*": ["./src/providers/*"],
-      "@translations/*": ["./src/translations/*"]
+      "@translations/*": ["./src/translations/*"],
+      "@config/*": ["./src/config/*"]
     }
   },
   "include": [

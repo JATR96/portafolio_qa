@@ -1,5 +1,13 @@
 import { useTranslation } from 'react-i18next';
 
+import { motion } from 'framer-motion';
+
+import {
+  fadeIn,
+  fadeUp,
+  staggerContainer,
+} from '@config/animations';
+
 import styles from './Hero.module.scss';
 
 const Hero = (): React.JSX.Element => {
@@ -10,20 +18,35 @@ const Hero = (): React.JSX.Element => {
       id="home"
       className={styles.hero}
     >
-      <div className={styles.container}>
-        <span className={styles.badge}>
+      <motion.div
+        className={styles.container}
+        variants={staggerContainer}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.span
+          className={styles.badge}
+          variants={fadeIn}
+        >
           {t('hero.badge')}
-        </span>
+        </motion.span>
 
-        <h1 className={styles.name}>
-          {t('hero.name')}
-        </h1>
+        <motion.h1
+          className={styles.name}
+          variants={fadeUp}
+        >
+        </motion.h1>
 
-        <p className={styles.description}>
-          {t('hero.description')}
-        </p>
+        <motion.p
+          className={styles.description}
+          variants={fadeUp}
+        >
+        </motion.p>
 
-        <div className={styles.actions}>
+        <motion.div
+          className={styles.actions}
+          variants={fadeUp}
+        >
           <a
             href="#projects"
             className={styles.primaryButton}
@@ -37,9 +60,12 @@ const Hero = (): React.JSX.Element => {
           >
             {t('hero.secondaryButton')}
           </a>
-        </div>
+        </motion.div>
 
-        <div className={styles.stats}>
+        <motion.div
+          className={styles.stats}
+          variants={fadeUp}
+        >
           <div className={styles.stat}>
             {t('hero.statOne')}
           </div>
@@ -51,8 +77,8 @@ const Hero = (): React.JSX.Element => {
           <div className={styles.stat}>
             {t('hero.statThree')}
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
