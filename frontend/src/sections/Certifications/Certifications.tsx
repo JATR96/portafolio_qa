@@ -2,6 +2,13 @@ import { useTranslation } from 'react-i18next';
 
 import { certifications } from '@data/certifications';
 
+import { motion } from 'framer-motion';
+
+import {
+  fadeUp,
+  staggerContainer,
+} from '../../config/animations';
+
 import styles from './Certifications.module.scss';
 
 const Certifications =
@@ -34,36 +41,38 @@ const Certifications =
           styles.certifications
         }
       >
-        <div
-          className={
-            styles.container
-          }
+        <motion.div
+          className={styles.container}
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{
+            once: true,
+            amount: 0.2,
+          }}
         >
-          <h2
-            className={
-              styles.title
-            }
+          <motion.h2
+            className={styles.title}
+            variants={fadeUp}
           >
             {t(
               'certifications.title',
             )}
-          </h2>
+          </motion.h2>
 
-          <p
-            className={
-              styles.description
-            }
+          <motion.p
+            className={styles.description}
+            variants={fadeUp}
           >
             {t(
               'certifications.description',
             )}
-          </p>
+          </motion.p>
 
           {featuredCertification && (
-            <article
-              className={
-                styles.featured
-              }
+            <motion.article
+              className={styles.featured}
+              variants={fadeUp}
             >
               <span
                 className={
@@ -94,25 +103,21 @@ const Certifications =
                   featuredCertification.year
                 }
               </p>
-            </article>
+            </motion.article>
           )}
 
-          <div
-            className={
-              styles.grid
-            }
+          <motion.div
+            className={styles.grid}
+            variants={staggerContainer}
           >
             {secondaryCertifications.map(
               (
                 certification,
               ) => (
-                <article
-                  key={
-                    certification.id
-                  }
-                  className={
-                    styles.card
-                  }
+                <motion.article
+                  key={certification.id}
+                  className={styles.card}
+                  variants={fadeUp}
                 >
                   <h3>
                     {
@@ -131,11 +136,11 @@ const Certifications =
                       certification.year
                     }
                   </p>
-                </article>
+                </motion.article>
               ),
             )}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
     );
   };

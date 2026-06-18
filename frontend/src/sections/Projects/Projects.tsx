@@ -55,124 +55,117 @@ const Projects = (): React.JSX.Element => {
         </motion.p>
 
         {featuredProject && (
-          <article
+          <motion.article
             className={styles.featured}
+            variants={fadeUp}
           >
             <div>
-              <span
+              <motion.span
                 className={styles.featuredBadge}
+                variants={fadeUp}
               >
                 Featured Project
-              </span>
+              </motion.span>
 
-              <h3
-                className={
-                  styles.featuredTitle
-                }
+              <motion.h3
+                className={styles.featuredTitle}
+                variants={fadeUp}
               >
                 {featuredProject.title}
-              </h3>
+              </motion.h3>
 
-              <p
-                className={
-                  styles.featuredDescription
-                }
+              <motion.p
+                className={styles.featuredDescription}
+                variants={fadeUp}
               >
                 {
                   featuredProject.description
                 }
-              </p>
+              </motion.p>
 
               <div
-                className={
-                  styles.featuredbadges
-                }
+                className={styles.featuredbadges}
               >
                 {featuredProject.stack.map(
                   (technology) => (
-                    <span
+                    <motion.span
                       key={technology}
-                      className={
-                        styles.badge
-                      }
+                      className={styles.badge}
+                      variants={fadeUp}
                     >
                       {technology}
-                    </span>
+                    </motion.span>
                   ),
                 )}
               </div>
 
-              <a
+              <motion.a
                 href={
                   featuredProject.githubUrl
                 }
                 target="_blank"
                 rel="noreferrer"
                 className={styles.link}
+                variants={fadeUp}
               >
                 View Repository
-              </a>
+              </motion.a>
             </div>
-          </article>
+          </motion.article>
         )}
 
         <div className={styles.grid}>
           {secondaryProjects.map(
             (project) => (
-              <article
+              <motion.article
                 key={project.id}
                 className={styles.card}
+                variants={fadeUp}
               >
-                <h3
-                  className={
-                    styles.cardTitle
-                  }
+                <motion.h3
+                  className={styles.cardTitle}
+                  variants={fadeUp}
                 >
                   {project.title}
-                </h3>
+                </motion.h3>
 
-                <p
-                  className={
-                    styles.cardDescription
-                  }
+                <motion.p
+                  className={styles.cardDescription}
+                  variants={fadeUp}
                 >
                   {project.description}
-                </p>
+                </motion.p>
 
-                <div
-                  className={
-                    styles.badges
-                  }
+                <motion.div
+                  className={styles.badges}
+                  variants={fadeUp}
                 >
                   {project.stack.map(
                     (
                       technology,
                     ) => (
                       <span
-                        key={
-                          technology
-                        }
-                        className={
-                          styles.badge
-                        }
+                        key={technology}
+                        className={styles.badge}
                       >
                         {technology}
                       </span>
                     ),
                   )}
-                </div>
+                </motion.div>
 
-                <a
+                <motion.a
                   href={
                     project.githubUrl
                   }
                   target="_blank"
                   rel="noreferrer"
                   className={styles.link}
+                  variants={fadeUp}
                 >
                   GitHub
-                </a>
-              </article>
+                </motion.a>
+              </motion.article>
             ),
           )}
         </div>
