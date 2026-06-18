@@ -1,40 +1,140 @@
-import { useLanguage } from '@hooks/useLanguage';
+import { useEffect, useRef, useState } from 'react';
+
+import { Languages, ChevronDown } from 'lucide-react';
+
+import useLanguageStore from '@store/languageStore';
 
 import styles from './LanguageSwitcher.module.scss';
 
-function LanguageSwitcher(): React.JSX.Element {
-  const {
-    language,
-    changeLanguage,
-  } = useLanguage();
+const LanguageSwitcher = (): React.JSX.Element => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const containerRef =
+    useRef<HTMLDivElement>(null);
+
+  const language =
+    useLanguageStore(
+      (state) => state.language,
+    );
+
+  const setLanguage =
+    useLanguageStore(
+      (state) =>
+        state.setLanguage,
+    );
+
+  useEffect(() => {
+    const handleClickOutside = (
+      event: MouseEvent,
+    ) => {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(
+          event.target as Node,
+        )
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener(
+      'mousedown',
+      handleClickOutside,
+    );
+
+    return () => {
+      document.removeEventListener(
+        'mousedown',
+        handleClickOutside,
+      );
+    };
+  }, []);
+
+  const handleLanguageChange = (
+    languageCode:
+      | 'es'
+      | 'en',
+  ) => {
+    setLanguage(
+      languageCode,
+    );
+
+    setIsOpen(false);
+  };
 
   return (
-    <div className={styles.switcher}>
+    <div
+      ref={containerRef}
+      className={
+        styles.container
+      }
+    >
       <button
         type="button"
-        onClick={() => void changeLanguage('es')}
         className={
-          language === 'es'
-            ? styles.active
-            : ''
+          styles.trigger
+        }
+        onClick={() =>
+          setIsOpen(
+            (
+              previousState,
+            ) =>
+              !previousState,
+          )
         }
       >
-        ES
+        <Languages
+          size={16}
+        />
+
+        <span>
+          {language === 'es'
+            ? 'Español'
+            : 'English'}
+        </span>
+
+        <ChevronDown
+          size={14}
+        />
       </button>
 
-      <button
-        type="button"
-        onClick={() => void changeLanguage('en')}
-        className={
-          language === 'en'
-            ? styles.active
-            : ''
-        }
-      >
-        EN
-      </button>
+      {isOpen && (
+        <div
+          className={
+            styles.dropdown
+          }
+        >
+          <button
+            type="button"
+            className={
+              styles.option
+            }
+            onClick={() =>
+              handleLanguageChange(
+                'es',
+              )
+            }
+          >
+            Español
+          </button>
+
+          <button
+            type="button"
+            className={
+              styles.option
+            }
+            onClick={() =>
+              handleLanguageChange(
+                'en',
+              )
+            }
+          >
+            English
+          </button>
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default LanguageSwitcher;
