@@ -1,5 +1,12 @@
 import { useTranslation } from 'react-i18next';
 
+import { motion } from 'framer-motion';
+
+import {
+  fadeUp,
+  staggerContainer,
+} from '../../config/animations';
+
 import styles from './About.module.scss';
 
 const About = (): React.JSX.Element => {
@@ -13,63 +20,91 @@ const About = (): React.JSX.Element => {
       id="about"
       className={styles.about}
     >
-      <div className={styles.container}>
-        <h2 className={styles.title}>
+      <motion.div
+        className={styles.container}
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{
+          once: true,
+          amount: 0.2,
+        }}
+      >
+        <motion.h2
+          className={styles.title}
+          variants={fadeUp}
+        >
           {t('about.title')}
-        </h2>
+        </motion.h2>
 
-        <p
-          className={
-            styles.description
-          }
+        <motion.p
+          className={styles.description}
+          variants={fadeUp}
         >
           {t(
             'about.description',
           )}
-        </p>
+        </motion.p>
 
-        <div
-          className={
-            styles.specialties
-          }
+        <motion.div
+          className={styles.specialties}
+          variants={staggerContainer}
         >
-          <div className={styles.card}>
+          <motion.div
+            className={styles.card}
+            variants={fadeUp}
+          >
             {t(
               'about.specialties.one',
             )}
-          </div>
+          </motion.div>
 
-          <div className={styles.card}>
+          <motion.div
+            className={styles.card}
+            variants={fadeUp}
+          >
             {t(
               'about.specialties.two',
             )}
-          </div>
+          </motion.div>
 
-          <div className={styles.card}>
+          <motion.div
+            className={styles.card}
+            variants={fadeUp}
+          >
             {t(
               'about.specialties.three',
             )}
-          </div>
+          </motion.div>
 
-          <div className={styles.card}>
+          <motion.div
+            className={styles.card}
+            variants={fadeUp}
+          >
             {t(
               'about.specialties.four',
             )}
-          </div>
+          </motion.div>
 
-          <div className={styles.card}>
+          <motion.div
+            className={styles.card}
+            variants={fadeUp}
+          >
             {t(
               'about.specialties.five',
             )}
-          </div>
+          </motion.div>
 
-          <div className={styles.card}>
+          <motion.div
+            className={styles.card}
+            variants={fadeUp}
+          >
             {t(
               'about.specialties.six',
             )}
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
