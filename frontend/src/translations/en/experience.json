@@ -1,0 +1,39 @@
+{
+  "section": {
+    "title": "Experience",
+    "description": "Professional experience in automation, testing and software quality."
+  },
+
+  "companies": {
+    "company-1": {
+      "role": "QA Automation Engineer",
+
+      "projects": {
+        "project-1": {
+          "name": "Mobile Banking",
+
+          "description": "End-to-end test automation for banking mobile application.",
+
+          "responsibilities": [
+            "Framework design",
+            "UI automation",
+            "API testing",
+            "CI/CD integration"
+          ]
+        },
+
+        "project-2": {
+          "name": "Customer Portal",
+
+          "description": "Regression automation for enterprise web portal.",
+
+          "responsibilities": [
+            "Functional testing",
+            "Smoke testing",
+            "Regression testing"
+          ]
+        }
+      }
+    }
+  }
+}

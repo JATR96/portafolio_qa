@@ -1,39 +1,48 @@
-export interface Experience {
-  id: string;
-  company: string;
-  role: string;
-  period: string;
-  description: string;
-  technologies: string[];
-}
+import type {
+  Experience,
+} from '@shared-types/experience';
 
-export const experiences: Experience[] = [
-  {
-    id: 'experience-1',
-    company: 'Enterprise Company',
-    role: 'QA Automation Engineer',
-    period: '2023 - Present',
-    description:
-      'Diseño e implementación de frameworks de automatización, pruebas API y procesos CI/CD.',
-    technologies: [
-      'Playwright',
-      'TypeScript',
-      'Jenkins',
-      'GitHub Actions',
-    ],
-  },
+export const experiences: Experience[] =
+  [
+    {
+      id: 'company-1',
 
-  {
-    id: 'experience-2',
-    company: 'Technology Company',
-    role: 'QA Engineer',
-    period: '2021 - 2023',
-    description:
-      'Ejecución de pruebas funcionales, automatizadas y de regresión.',
-    technologies: [
-      'Selenium',
-      'Postman',
-      'SQL',
-    ],
-  },
-];
+      company:
+        'Enterprise Company',
+
+      role:
+        'QA Automation Engineer',
+
+      period:
+        '2023 - Present',
+
+      projects: [
+        {
+          id: 'project-1',
+
+          duration:
+            '10 months',
+
+          technologies: [
+            'Playwright',
+            'TypeScript',
+            'Jenkins',
+            'GitHub Actions',
+          ],
+        },
+
+        {
+          id: 'project-2',
+
+          duration:
+            '8 months',
+
+          technologies: [
+            'Selenium',
+            'Java',
+            'Maven',
+          ],
+        },
+      ],
+    },
+  ];

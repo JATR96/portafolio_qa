@@ -1,0 +1,39 @@
+{
+  "section": {
+    "title": "Experiencia",
+    "description": "Experiencia profesional en automatización, testing y calidad de software."
+  },
+
+  "companies": {
+    "company-1": {
+      "role": "QA Automation Engineer",
+
+      "projects": {
+        "project-1": {
+          "name": "Banca Móvil",
+
+          "description": "Automatización de pruebas end-to-end para aplicación móvil bancaria.",
+
+          "responsibilities": [
+            "Diseño de framework",
+            "Automatización UI",
+            "Pruebas API",
+            "Integración CI/CD"
+          ]
+        },
+
+        "project-2": {
+          "name": "Portal de Clientes",
+
+          "description": "Automatización de regresión para portal web empresarial.",
+
+          "responsibilities": [
+            "Pruebas funcionales",
+            "Smoke testing",
+            "Regression testing"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -7,10 +7,12 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import esCommon from '../translations/es/common.json';
 import esNavigation from '../translations/es/navigation.json';
 import esHomepage from '../translations/es/homepage.json';
+import esExperience from '../translations/es/experience.json';
 
 import enCommon from '../translations/en/common.json';
 import enNavigation from '../translations/en/navigation.json';
 import enHomepage from '../translations/en/homepage.json';
+import enExperience from '../translations/en/experience.json';
 
 void i18n
   .use(LanguageDetector)
@@ -36,6 +38,8 @@ void i18n
           esNavigation,
         homepage:
           esHomepage,
+        experience:
+          esExperience,  
       },
 
       en: {
@@ -44,6 +48,8 @@ void i18n
           enNavigation,
         homepage:
           enHomepage,
+        experience:
+          enExperience,  
       },
     },
   });
