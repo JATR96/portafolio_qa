@@ -38,5 +38,9 @@
   "contact": {
     "title": "Contacto",
     "description": "¿Interesado en colaborar o conversar sobre QA Automation, testing o desarrollo? Estoy disponible para nuevas oportunidades."
+  },
+  "experience": {
+    "title": "Experiencia",
+    "description": "Trayectoria profesional en aseguramiento de calidad, automatización y testing."
   }
 }

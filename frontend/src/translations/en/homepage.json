@@ -38,5 +38,9 @@
   "contact": {
     "title": "Contact",
     "description": "Interested in collaborating or discussing QA Automation, testing or development? I am available for new opportunities."
+  },
+  "experience": {
+    "title": "Experience",
+    "description": "Professional experience in quality assurance, automation and testing."
   }
 }

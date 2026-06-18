@@ -4,6 +4,8 @@ import About from '@sections/About/About';
 
 import Skills from '@sections/Skills/Skills';
 
+import Experience from '@sections/Experience/Experience';
+
 import Projects from '@sections/Projects/Projects';
 
 import Certifications from '@sections/Certifications/Certifications';
@@ -26,6 +28,7 @@ const HomePage = (): React.JSX.Element => {
         <Hero />
         <About />
         <Skills />
+        <Experience />
         <Projects />
         <Certifications />
         <Contact />
