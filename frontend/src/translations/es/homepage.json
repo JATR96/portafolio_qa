@@ -1,4 +1,14 @@
 {
+  "hero": {
+    "badge": "QA Automation Engineer",
+    "name": "Jesús Abel T.",
+    "description": "Especialista en Automatización de Pruebas, Performance Testing y Calidad de Software Empresarial.",
+    "primaryButton": "Ver Proyectos",
+    "secondaryButton": "Contactarme",
+    "statOne": "QA Automation",
+    "statTwo": "Performance Testing",
+    "statThree": "Enterprise Quality"
+  },  
   "about": {
     "title": "Sobre Mí",
 
