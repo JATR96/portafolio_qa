@@ -2,6 +2,13 @@ import { useTranslation } from 'react-i18next';
 
 import { projects } from '@data/projects';
 
+import { motion } from 'framer-motion';
+
+import {
+  fadeUp,
+  staggerContainer,
+} from '../../config/animations';
+
 import styles from './Projects.module.scss';
 
 const Projects = (): React.JSX.Element => {
@@ -12,20 +19,39 @@ const Projects = (): React.JSX.Element => {
       id="projects"
       className={styles.projects}
     >
-      <div className={styles.container}>
-        <h2 className={styles.title}>
+      <motion.div
+        className={styles.container}
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{
+          once: true,
+          amount: 0.2,
+        }}
+      >
+        <motion.h2
+          className={styles.title}
+          variants={fadeUp}
+        >
           {t('projects.title')}
-        </h2>
+        </motion.h2>
 
-        <p className={styles.description}>
+        <motion.p
+          className={styles.description}
+          variants={fadeUp}
+        >
           {t('projects.description')}
-        </p>
+        </motion.p>
 
-        <div className={styles.grid}>
+        <motion.div
+          className={styles.grid}
+          variants={staggerContainer}
+        >
           {projects.map((project) => (
-            <article
+            <motion.article
               key={project.id}
               className={styles.card}
+              variants={fadeUp}
             >
               <h3 className={styles.cardTitle}>
                 {project.title}
@@ -64,10 +90,10 @@ const Projects = (): React.JSX.Element => {
               >
                 GitHub
               </a>
-            </article>
+            </motion.article>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
