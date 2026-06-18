@@ -1,12 +1,4 @@
 {
-  "hero": {
-    "badge": "QA AUTOMATION ENGINEER",
-    "title": "Jesús Abel",
-    "subtitle": "Portafolio Profesional",
-    "description": "Especialista en Automatización de Pruebas, APIs, DevOps y Calidad de Software."
-  },
-  "language": {
-    "spanish": "Español",
-    "english": "Inglés"
-  }
+  "language": "Español",
+  "switchLanguage": "Cambiar idioma"
 }
