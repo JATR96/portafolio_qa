@@ -20,5 +20,9 @@
   "projects": {
     "title": "Proyectos",
     "description": "Proyectos destacados relacionados con automatización, testing y desarrollo."
+  },
+  "certifications": {
+    "title": "Certificaciones",
+    "description": "Certificaciones y credenciales profesionales relacionadas con calidad de software, automatización y testing."
   }
 }
