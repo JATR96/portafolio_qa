@@ -12,5 +12,9 @@
       "five": "Agile QA",
       "six": "CI/CD Testing"
     }
+  },
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "description": "Tecnologías y herramientas utilizadas para automatización, pruebas, calidad de software y desarrollo frontend."
   }
 }
