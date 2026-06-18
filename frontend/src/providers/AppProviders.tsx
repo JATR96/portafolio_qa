@@ -1,4 +1,6 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
+
+import { BrowserRouter } from 'react-router-dom';
 
 import { QueryProvider } from './QueryProvider';
 import ThemeProvider from './ThemeProvider';
@@ -12,7 +14,11 @@ export function AppProviders({
 }: AppProvidersProps): React.JSX.Element {
   return (
     <QueryProvider>
-      <ThemeProvider>{children}</ThemeProvider>
+      <ThemeProvider>
+        <BrowserRouter>
+          {children}
+        </BrowserRouter>
+      </ThemeProvider>
     </QueryProvider>
   );
 }

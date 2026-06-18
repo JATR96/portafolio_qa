@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode } from 'react';
 
 import {
   QueryClient,
@@ -11,27 +11,32 @@ interface QueryProviderProps {
   children: ReactNode;
 }
 
+const queryClient =
+  new QueryClient({
+    defaultOptions: {
+      queries: {
+        retry: 1,
+
+        refetchOnWindowFocus: false,
+
+        staleTime:
+          1000 * 60 * 5,
+      },
+    },
+  });
+
 export function QueryProvider({
   children,
 }: QueryProviderProps): React.JSX.Element {
-  const [queryClient] = useState(
-    () =>
-      new QueryClient({
-        defaultOptions: {
-          queries: {
-            retry: 1,
-            refetchOnWindowFocus: false,
-            staleTime: 60_000,
-          },
-        },
-      }),
-  );
-
   return (
-    <QueryClientProvider client={queryClient}>
+    <QueryClientProvider
+      client={queryClient}
+    >
       {children}
 
-      <ReactQueryDevtools initialIsOpen={false} />
+      <ReactQueryDevtools
+        initialIsOpen={false}
+      />
     </QueryClientProvider>
   );
 }

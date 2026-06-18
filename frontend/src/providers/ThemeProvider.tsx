@@ -1,17 +1,21 @@
-import { useEffect } from 'react';
+import {
+  useEffect,
+  type ReactNode,
+} from 'react';
 
-import useThemeStore from '../store/themeStore';
+import useThemeStore from '@store/themeStore';
 
 interface ThemeProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const ThemeProvider = ({
   children,
 }: ThemeProviderProps) => {
-  const theme = useThemeStore(
-    (state) => state.theme,
-  );
+  const theme =
+    useThemeStore(
+      (state) => state.theme,
+    );
 
   useEffect(() => {
     document.documentElement.setAttribute(
