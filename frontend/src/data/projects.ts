@@ -41,7 +41,7 @@ export const projects: Project[] = [
       'Swagger',
     ],
     githubUrl: '#',
-    featured: true,
+    featured: false,
     category: 'api',
   },
 
@@ -55,7 +55,7 @@ export const projects: Project[] = [
       'K6',
     ],
     githubUrl: '#',
-    featured: true,
+    featured: false,
     category: 'performance',
   },
 ];

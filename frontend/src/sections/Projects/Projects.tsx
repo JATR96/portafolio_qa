@@ -12,6 +12,17 @@ import {
 import styles from './Projects.module.scss';
 
 const Projects = (): React.JSX.Element => {
+
+  const featuredProject =
+    projects.find(
+      (project) => project.featured,
+    );
+
+  const secondaryProjects =
+    projects.filter(
+      (project) => !project.featured,
+    );
+
   const { t } = useTranslation('homepage');
 
   return (
@@ -43,30 +54,41 @@ const Projects = (): React.JSX.Element => {
           {t('projects.description')}
         </motion.p>
 
-        <motion.div
-          className={styles.grid}
-          variants={staggerContainer}
-        >
-          {projects.map((project) => (
-            <motion.article
-              key={project.id}
-              className={styles.card}
-              variants={fadeUp}
-            >
-              <h3 className={styles.cardTitle}>
-                {project.title}
+        {featuredProject && (
+          <article
+            className={styles.featured}
+          >
+            <div>
+              <span
+                className={styles.featuredBadge}
+              >
+                Featured Project
+              </span>
+
+              <h3
+                className={
+                  styles.featuredTitle
+                }
+              >
+                {featuredProject.title}
               </h3>
 
               <p
                 className={
-                  styles.cardDescription
+                  styles.featuredDescription
                 }
               >
-                {project.description}
+                {
+                  featuredProject.description
+                }
               </p>
 
-              <div className={styles.badges}>
-                {project.stack.map(
+              <div
+                className={
+                  styles.featuredbadges
+                }
+              >
+                {featuredProject.stack.map(
                   (technology) => (
                     <span
                       key={technology}
@@ -82,17 +104,78 @@ const Projects = (): React.JSX.Element => {
 
               <a
                 href={
-                  project.githubUrl
+                  featuredProject.githubUrl
                 }
                 target="_blank"
                 rel="noreferrer"
                 className={styles.link}
               >
-                GitHub
+                View Repository
               </a>
-            </motion.article>
-          ))}
-        </motion.div>
+            </div>
+          </article>
+        )}
+
+        <div className={styles.grid}>
+          {secondaryProjects.map(
+            (project) => (
+              <article
+                key={project.id}
+                className={styles.card}
+              >
+                <h3
+                  className={
+                    styles.cardTitle
+                  }
+                >
+                  {project.title}
+                </h3>
+
+                <p
+                  className={
+                    styles.cardDescription
+                  }
+                >
+                  {project.description}
+                </p>
+
+                <div
+                  className={
+                    styles.badges
+                  }
+                >
+                  {project.stack.map(
+                    (
+                      technology,
+                    ) => (
+                      <span
+                        key={
+                          technology
+                        }
+                        className={
+                          styles.badge
+                        }
+                      >
+                        {technology}
+                      </span>
+                    ),
+                  )}
+                </div>
+
+                <a
+                  href={
+                    project.githubUrl
+                  }
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.link}
+                >
+                  GitHub
+                </a>
+              </article>
+            ),
+          )}
+        </div>
       </motion.div>
     </section>
   );
