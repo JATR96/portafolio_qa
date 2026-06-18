@@ -1,6 +1,7 @@
 import { X } from 'lucide-react';
 
 import { NAVIGATION_ITEMS } from '../../config/navigation';
+import { useTranslation } from 'react-i18next';
 
 import styles from './MobileMenu.module.scss';
 
@@ -13,6 +14,12 @@ const MobileMenu = ({
   isOpen,
   onClose,
 }: MobileMenuProps) => {
+
+  const { t } =
+  useTranslation(
+    'navigation',
+  );
+
   return (
     <div
       className={`${styles.overlay} ${
@@ -37,7 +44,9 @@ const MobileMenu = ({
               className={styles.link}
               onClick={onClose}
             >
-              {item.label}
+              {t(
+                item.translationKey,
+              )}
             </a>
           ))}
         </nav>

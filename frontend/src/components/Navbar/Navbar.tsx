@@ -5,10 +5,18 @@ import { NAVIGATION_ITEMS } from '../../config/navigation';
 
 import MobileMenu from '../MobileMenu/MobileMenu';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 
 import styles from './Navbar.module.scss';
 
 const Navbar = () => {
+  
+  const { t } =
+  useTranslation(
+    'navigation',
+  );
+
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggleMenu = (): void => {
@@ -37,13 +45,16 @@ const Navbar = () => {
                 href={item.href}
                 className={styles.link}
               >
-                {item.label}
+                {t(
+                  item.translationKey,
+                )}
               </a>
             ))}
           </nav>
 
           <div className={styles.actions}>
             <ThemeToggle />
+            <LanguageSwitcher />
             <a
               href="https://github.com/JATR96"
               target="_blank"

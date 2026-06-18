@@ -3,42 +3,45 @@ import type { NavigationItem } from '../types/navigation';
 export const NAVIGATION_ITEMS: NavigationItem[] = [
   {
     id: 'home',
-    label: 'Home',
+    translationKey: 'home',
     href: '#home',
   },
   {
     id: 'about',
-    label: 'About',
+    translationKey: 'about',
     href: '#about',
   },
   {
     id: 'skills',
-    label: 'Skills',
+    translationKey: 'skills',
     href: '#skills',
   },
   {
     id: 'projects',
-    label: 'Projects',
+    translationKey: 'projects',
     href: '#projects',
   },
   {
     id: 'certifications',
-    label: 'Certifications',
+    translationKey:
+      'certifications',
     href: '#certifications',
   },
   {
     id: 'dashboard',
-    label: 'QA Dashboard',
+    translationKey:
+      'dashboard',
     href: '#dashboard',
   },
   {
     id: 'blog',
-    label: 'Blog',
+    translationKey: 'blog',
     href: '#blog',
   },
   {
     id: 'contact',
-    label: 'Contact',
+    translationKey:
+      'contact',
     href: '#contact',
   },
 ];
