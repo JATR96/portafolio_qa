@@ -1,4 +1,9 @@
-export const skillGroups = [
+export interface SkillGroup {
+  title: string;
+  skills: string[];
+}
+
+export const skillGroups: SkillGroup[] = [
   {
     title: 'QA Automation',
     skills: [
