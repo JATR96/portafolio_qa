@@ -8,6 +8,8 @@ import Experience from '@sections/Experience/Experience';
 
 import Projects from '@sections/Projects/Projects';
 
+import Dashboard from '@sections/Dashboard/Dashboard';
+
 import Certifications from '@sections/Certifications/Certifications';
 
 import Contact from '@sections/Contact/Contact';
@@ -30,6 +32,7 @@ const HomePage = (): React.JSX.Element => {
         <Skills />
         <Experience />
         <Projects />
+        <Dashboard />
         <Certifications />
         <Contact />
       </main>

@@ -9,12 +9,14 @@ import esNavigation from '../translations/es/navigation.json';
 import esHomepage from '../translations/es/homepage.json';
 import esExperience from '../translations/es/experience.json';
 import esProject from '../translations/es/projects.json';
+import esDashboard from '../translations/es/dashboard.json';
 
 import enCommon from '../translations/en/common.json';
 import enNavigation from '../translations/en/navigation.json';
 import enHomepage from '../translations/en/homepage.json';
 import enExperience from '../translations/en/experience.json';
 import enProject from '../translations/en/projects.json';
+import enDashboard from '../translations/en/dashboard.json';
 
 void i18n
   .use(LanguageDetector)
@@ -44,7 +46,9 @@ void i18n
         experience:
           esExperience,
         project:
-          esProject,    
+          esProject,
+        dashboard:
+          esDashboard,      
       },
 
       en: {
@@ -57,7 +61,9 @@ void i18n
         experience:
           enExperience,
         project:
-          enProject,  
+          enProject,
+        dashboard:
+          enDashboard,    
       },
     },
   });

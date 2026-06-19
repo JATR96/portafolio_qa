@@ -1,0 +1,24 @@
+{
+  "section": {
+    "title": "QA Dashboard",
+    "description": "Key automation and quality metrics."
+  },
+
+  "metrics": {
+    "coverage": {
+      "label": "Automation Coverage"
+    },
+
+    "testCases": {
+      "label": "Test Cases"
+    },
+
+    "passRate": {
+      "label": "Pass Rate"
+    },
+
+    "executionTime": {
+      "label": "Execution Time"
+    }
+  }
+}

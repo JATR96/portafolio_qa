@@ -22,16 +22,16 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
     href: '#projects',
   },
   {
-    id: 'certifications',
-    translationKey:
-      'certifications',
-    href: '#certifications',
-  },
-  {
     id: 'dashboard',
     translationKey:
       'dashboard',
     href: '#dashboard',
+  },
+  {
+    id: 'certifications',
+    translationKey:
+      'certifications',
+    href: '#certifications',
   },
   {
     id: 'blog',
