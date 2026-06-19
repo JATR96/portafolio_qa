@@ -27,5 +27,9 @@
     "testCases": "automation growth",
     "passRate": "execution stability",
     "executionTime": "execution time reduction"
+  },
+
+  "chart": {
+    "title": "Coverage Trend"
   }
 }

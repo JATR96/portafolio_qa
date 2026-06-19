@@ -13,6 +13,9 @@ import {
 import AnimatedCounter
   from '@components/AnimatedCounter/AnimatedCounter';
 
+import QAMetricsChart
+  from '@components/QAMetricsChart/QAMetricsChart';  
+
 import styles
   from './Dashboard.module.scss';
 
@@ -121,6 +124,15 @@ const Dashboard =
                 </article>
               ),
             )}
+          </div>
+          <div className={styles.chartSection}>
+            <h3>
+              {t(
+                'chart.title',
+              )}
+            </h3>
+
+            <QAMetricsChart />
           </div>
         </div>
       </section>
