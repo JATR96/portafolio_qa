@@ -5,6 +5,9 @@ import {
   dashboardMetrics,
 } from '@data/dashboard';
 
+import AnimatedCounter
+  from '@components/AnimatedCounter/AnimatedCounter';
+
 import styles
   from './Dashboard.module.scss';
 
@@ -65,13 +68,17 @@ const Dashboard =
                   }
                 >
                   <span
-                    className={
-                      styles.value
-                    }
+                    className={styles.value}
                   >
-                    {
-                      metric.value
-                    }
+                    <AnimatedCounter
+                      end={metric.value}
+                      suffix={
+                        metric.suffix
+                      }
+                      decimals={
+                        metric.decimals
+                      }
+                    />
                   </span>
 
                   <h3

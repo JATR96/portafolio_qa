@@ -6,21 +6,26 @@ export const dashboardMetrics:
   DashboardMetric[] = [
     {
       id: 'coverage',
-      value: '98%',
+      value: 98,
+      suffix: '%',
     },
 
     {
       id: 'testCases',
-      value: '1250+',
+      value: 1250,
+      suffix: '+',
     },
 
     {
       id: 'passRate',
-      value: '99.2%',
+      value: 99.2,
+      suffix: '%',
+      decimals: 1,
     },
 
     {
       id: 'executionTime',
-      value: '12 min',
+      value: 12,
+      suffix: ' min',
     },
   ];

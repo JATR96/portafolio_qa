@@ -1,4 +1,6 @@
 export interface DashboardMetric {
   id: string;
-  value: string;
+  value: number;
+  suffix?: string;
+  decimals?: number;
 }
