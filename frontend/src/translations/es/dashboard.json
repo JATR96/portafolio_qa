@@ -20,5 +20,12 @@
     "executionTime": {
       "label": "Tiempo de Ejecución"
     }
+  },
+
+  "analytics": {
+    "coverage": "vs trimestre anterior",
+    "testCases": "crecimiento automatización",
+    "passRate": "estabilidad de ejecución",
+    "executionTime": "reducción de tiempo"
   }
 }

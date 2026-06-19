@@ -2,6 +2,11 @@ import { useTranslation }
   from 'react-i18next';
 
 import {
+  TrendingUp,
+  TrendingDown,
+} from 'lucide-react';
+  
+import {
   dashboardMetrics,
 } from '@data/dashboard';
 
@@ -90,6 +95,29 @@ const Dashboard =
                       `metrics.${metric.id}.label`,
                     )}
                   </h3>
+                  <div className={styles.analytics}>
+                    <span
+                      className={
+                        metric.trend === 'up'
+                          ? styles.positive
+                          : styles.negative
+                      }
+                    >
+                      {metric.trend === 'up' ? (
+                        <TrendingUp size={16} />
+                      ) : (
+                        <TrendingDown size={16} />
+                      )}
+
+                      {metric.trendValue}
+                    </span>
+
+                    <small>
+                      {t(
+                        `analytics.${metric.id}`,
+                      )}
+                    </small>
+                  </div>
                 </article>
               ),
             )}

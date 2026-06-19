@@ -68,3 +68,32 @@
   color:
     var(--text-secondary);
 }
+
+.analytics {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.positive,
+.negative {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+.positive {
+  color: #22c55e;
+}
+
+.negative {
+  color: #f59e0b;
+}
+
+.analytics small {
+  text-align: center;
+  color: var(--text-secondary);
+}
