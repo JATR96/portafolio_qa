@@ -1,25 +1,10 @@
-export type ProjectCategory =
-  | 'automation'
-  | 'api'
-  | 'performance'
-  | 'frontend';
-
-export interface Project {
-  id: string;
-  title: string;
-  description: string;
-  stack: string[];
-  githubUrl: string;
-  featured: boolean;
-  category: ProjectCategory;
-}
+import type {
+  Project,
+} from '@shared-types/project';
 
 export const projects: Project[] = [
   {
     id: 'automation-framework',
-    title: 'QA Automation Framework',
-    description:
-      'Framework empresarial para automatización E2E con Playwright y TypeScript.',
     stack: [
       'Playwright',
       'TypeScript',
@@ -32,9 +17,6 @@ export const projects: Project[] = [
 
   {
     id: 'api-testing-suite',
-    title: 'API Testing Suite',
-    description:
-      'Automatización de pruebas API para servicios REST.',
     stack: [
       'Postman',
       'REST Assured',
@@ -47,9 +29,6 @@ export const projects: Project[] = [
 
   {
     id: 'performance-lab',
-    title: 'Performance Lab',
-    description:
-      'Laboratorio de pruebas de carga y rendimiento.',
     stack: [
       'JMeter',
       'K6',

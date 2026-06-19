@@ -12,18 +12,15 @@ import {
 import styles from './Projects.module.scss';
 
 const Projects = (): React.JSX.Element => {
+  const featuredProject = projects.find(
+    (project) => project.featured,
+  );
 
-  const featuredProject =
-    projects.find(
-      (project) => project.featured,
-    );
+  const secondaryProjects = projects.filter(
+    (project) => !project.featured,
+  );
 
-  const secondaryProjects =
-    projects.filter(
-      (project) => !project.featured,
-    );
-
-  const { t } = useTranslation('homepage');
+  const { t } = useTranslation('project');
 
   return (
     <section
@@ -44,14 +41,14 @@ const Projects = (): React.JSX.Element => {
           className={styles.title}
           variants={fadeUp}
         >
-          {t('projects.title')}
+          {t('section.title')}
         </motion.h2>
 
         <motion.p
           className={styles.description}
           variants={fadeUp}
         >
-          {t('projects.description')}
+          {t('section.description')}
         </motion.p>
 
         {featuredProject && (
@@ -71,20 +68,26 @@ const Projects = (): React.JSX.Element => {
                 className={styles.featuredTitle}
                 variants={fadeUp}
               >
-                {featuredProject.title}
+                {t(
+                  `projects.${featuredProject.id}.title`,
+                )}
               </motion.h3>
 
               <motion.p
-                className={styles.featuredDescription}
+                className={
+                  styles.featuredDescription
+                }
                 variants={fadeUp}
               >
-                {
-                  featuredProject.description
-                }
+                {t(
+                  `projects.${featuredProject.id}.description`,
+                )}
               </motion.p>
 
               <div
-                className={styles.featuredbadges}
+                className={
+                  styles.featuredbadges
+                }
               >
                 {featuredProject.stack.map(
                   (technology) => (
@@ -108,7 +111,7 @@ const Projects = (): React.JSX.Element => {
                 className={styles.link}
                 variants={fadeUp}
               >
-                View Repository
+                GitHub
               </motion.a>
             </div>
           </motion.article>
@@ -123,17 +126,25 @@ const Projects = (): React.JSX.Element => {
                 variants={fadeUp}
               >
                 <motion.h3
-                  className={styles.cardTitle}
+                  className={
+                    styles.cardTitle
+                  }
                   variants={fadeUp}
                 >
-                  {project.title}
+                  {t(
+                    `projects.${project.id}.title`,
+                  )}
                 </motion.h3>
 
                 <motion.p
-                  className={styles.cardDescription}
+                  className={
+                    styles.cardDescription
+                  }
                   variants={fadeUp}
                 >
-                  {project.description}
+                  {t(
+                    `projects.${project.id}.description`,
+                  )}
                 </motion.p>
 
                 <motion.div
@@ -141,9 +152,7 @@ const Projects = (): React.JSX.Element => {
                   variants={fadeUp}
                 >
                   {project.stack.map(
-                    (
-                      technology,
-                    ) => (
+                    (technology) => (
                       <span
                         key={technology}
                         className={styles.badge}
@@ -155,9 +164,7 @@ const Projects = (): React.JSX.Element => {
                 </motion.div>
 
                 <motion.a
-                  href={
-                    project.githubUrl
-                  }
+                  href={project.githubUrl}
                   target="_blank"
                   rel="noreferrer"
                   className={styles.link}

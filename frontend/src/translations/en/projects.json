@@ -1,0 +1,20 @@
+{
+  "section": {
+    "title": "Projects",
+    "description": "Featured projects related to automation, testing and development."
+  },
+  "projects": {
+    "automation-framework": {
+      "title": "QA Automation Framework",
+      "description": "Enterprise framework for E2E automation with Playwright and TypeScript."
+    },
+    "api-testing-suite": {
+      "title": "API Testing Suite",
+      "description": "API testing automation for REST services."
+    },
+    "performance-lab": {
+      "title": "Performance Lab",
+      "description": "Load and performance testing laboratory."
+    }
+  }
+}

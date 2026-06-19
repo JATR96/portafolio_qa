@@ -8,11 +8,13 @@ import esCommon from '../translations/es/common.json';
 import esNavigation from '../translations/es/navigation.json';
 import esHomepage from '../translations/es/homepage.json';
 import esExperience from '../translations/es/experience.json';
+import esProject from '../translations/es/projects.json';
 
 import enCommon from '../translations/en/common.json';
 import enNavigation from '../translations/en/navigation.json';
 import enHomepage from '../translations/en/homepage.json';
 import enExperience from '../translations/en/experience.json';
+import enProject from '../translations/en/projects.json';
 
 void i18n
   .use(LanguageDetector)
@@ -33,23 +35,29 @@ void i18n
 
     resources: {
       es: {
-        common: esCommon,
+        common: 
+          esCommon,
         navigation:
           esNavigation,
         homepage:
           esHomepage,
         experience:
-          esExperience,  
+          esExperience,
+        project:
+          esProject,    
       },
 
       en: {
-        common: enCommon,
+        common: 
+          enCommon,
         navigation:
           enNavigation,
         homepage:
           enHomepage,
         experience:
-          enExperience,  
+          enExperience,
+        project:
+          enProject,  
       },
     },
   });

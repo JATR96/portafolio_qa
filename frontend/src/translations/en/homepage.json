@@ -27,10 +27,6 @@
     "title": "Technical Skills",
     "description": "Technologies and tools used for automation, testing, software quality and frontend development."
   },
-  "projects": {
-    "title": "Projects",
-    "description": "Featured projects related to automation, testing and development."
-  },
   "certifications": {
     "title": "Certifications",
     "description": "Professional certifications and credentials related to software quality, automation and testing."
@@ -38,9 +34,5 @@
   "contact": {
     "title": "Contact",
     "description": "Interested in collaborating or discussing QA Automation, testing or development? I am available for new opportunities."
-  },
-  "experience": {
-    "title": "Experience",
-    "description": "Professional experience in quality assurance, automation and testing."
   }
 }

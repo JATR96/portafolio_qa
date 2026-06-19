@@ -1,0 +1,20 @@
+{
+  "section": {
+    "title": "Proyectos",
+    "description": "Proyectos destacados relacionados con automatización, testing y desarrollo."
+  },
+  "projects": {
+    "automation-framework": {
+      "title": "Frameword de Automatizacion QA",
+      "description": "Framework empresarial para automatización E2E con Playwright y TypeScript."
+    },
+    "api-testing-suite": {
+      "title": "Suite de pruebas de API",
+      "description": "Automatización de pruebas API para servicios REST."
+    },
+    "performance-lab": {
+      "title": "Laboratorio de rendimiento",
+      "description": "Laboratorio de pruebas de carga y rendimiento."
+    }
+  }
+}

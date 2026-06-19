@@ -27,10 +27,6 @@
     "title": "Habilidades Técnicas",
     "description": "Tecnologías y herramientas utilizadas para automatización, pruebas, calidad de software y desarrollo frontend."
   },
-  "projects": {
-    "title": "Proyectos",
-    "description": "Proyectos destacados relacionados con automatización, testing y desarrollo."
-  },
   "certifications": {
     "title": "Certificaciones",
     "description": "Certificaciones y credenciales profesionales relacionadas con calidad de software, automatización y testing."
@@ -38,9 +34,5 @@
   "contact": {
     "title": "Contacto",
     "description": "¿Interesado en colaborar o conversar sobre QA Automation, testing o desarrollo? Estoy disponible para nuevas oportunidades."
-  },
-  "experience": {
-    "title": "Experiencia",
-    "description": "Trayectoria profesional en aseguramiento de calidad, automatización y testing."
   }
 }
