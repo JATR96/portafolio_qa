@@ -95,6 +95,12 @@
     var(--border-color);
 }
 
+.projectCard:hover {
+  transform: translateY(-3px);
+  border-color:
+    var(--color-primary);
+}
+
 .projectCard h5 {
   margin-bottom: 0.75rem;
   font-size: 1.1rem;
