@@ -8,9 +8,13 @@
     "company-1": {
       "role": "QA Automation Engineer",
 
+      "period": "2013 - Present",
+
       "projects": {
         "project-1": {
           "name": "Mobile Banking",
+
+          "duration": "10 Months",
 
           "description": "End-to-end test automation for banking mobile application.",
 
@@ -24,6 +28,8 @@
 
         "project-2": {
           "name": "Customer Portal",
+
+          "duration": "8 Months",
 
           "description": "Regression automation for enterprise web portal.",
 

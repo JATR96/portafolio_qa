@@ -81,9 +81,9 @@ const Experience =
                     </h4>
 
                     <span>
-                      {
-                        experience.period
-                      }
+                      {t(
+                        `companies.${experience.id}.period`,
+                      )}
                     </span>
                   </motion.header>
 
@@ -120,9 +120,9 @@ const Experience =
                               className={styles.duration}
                               variants={fadeUp}
                             >
-                              {
-                                project.duration
-                              }
+                              {t(
+                                `companies.${experience.id}.projects.${project.id}.duration`,
+                              )}
                             </motion.p>
 
                             <motion.p
