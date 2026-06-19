@@ -2,6 +2,13 @@ import { useTranslation } from 'react-i18next';
 
 import { experiences } from '@data/experience';
 
+import { motion } from 'framer-motion';
+
+import {
+  fadeUp,
+  staggerContainer,
+} from '../../config/animations';
+
 import styles from './Experience.module.scss';
 
 const Experience =
@@ -16,48 +23,50 @@ const Experience =
         id="experience"
         className={styles.experience}
       >
-        <div
+        <motion.div
           className={styles.container}
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{
+            once: true,
+            amount: 0.2,
+          }}
         >
-          <h2
+          <motion.h2
             className={styles.title}
+            variants={fadeUp}
           >
             {t(
               'section.title',
             )}
-          </h2>
+          </motion.h2>
 
-          <p
-            className={
-              styles.description
-            }
+          <motion.p
+            className={styles.description}
+            variants={fadeUp}
           >
             {t(
               'section.description',
             )}
-          </p>
+          </motion.p>
 
-          <div
-            className={
-              styles.timeline
-            }
+          <motion.div
+            className={styles.timeline}
+            variants={fadeUp}
           >
             {experiences.map(
               (
                 experience,
               ) => (
-                <article
-                  key={
-                    experience.id
-                  }
-                  className={
-                    styles.companyCard
-                  }
+                <motion.article
+                  key={experience.id}
+                  className={styles.companyCard}
+                  variants={fadeUp}
                 >
-                  <header
-                    className={
-                      styles.companyHeader
-                    }
+                  <motion.header
+                    className={styles.companyHeader}
+                    variants={fadeUp}
                   >
                     <h3>
                       {
@@ -76,12 +85,11 @@ const Experience =
                         experience.period
                       }
                     </span>
-                  </header>
+                  </motion.header>
 
-                  <div
-                    className={
-                      styles.projects
-                    }
+                  <motion.div
+                    className={styles.projects}
+                    variants={fadeUp}
                   >
                     {experience.projects.map(
                       (
@@ -97,13 +105,10 @@ const Experience =
                           ) as string[];
 
                         return (
-                          <div
-                            key={
-                              project.id
-                            }
-                            className={
-                              styles.projectCard
-                            }
+                          <motion.div
+                            key={project.id}
+                            className={styles.projectCard}
+                            variants={fadeUp}
                           >
                             <h5>
                               {t(
@@ -111,30 +116,27 @@ const Experience =
                               )}
                             </h5>
 
-                            <p
-                              className={
-                                styles.duration
-                              }
+                            <motion.p
+                              className={styles.duration}
+                              variants={fadeUp}
                             >
                               {
                                 project.duration
                               }
-                            </p>
+                            </motion.p>
 
-                            <p
-                              className={
-                                styles.projectDescription
-                              }
+                            <motion.p
+                              className={styles.projectDescription}
+                              variants={fadeUp}
                             >
                               {t(
                                 `companies.${experience.id}.projects.${project.id}.description`,
                               )}
-                            </p>
+                            </motion.p>
 
-                            <ul
-                              className={
-                                styles.responsibilities
-                              }
+                            <motion.ul
+                              className={styles.responsibilities}
+                              variants={fadeUp}
                             >
                               {responsibilities.map(
                                 (
@@ -151,42 +153,38 @@ const Experience =
                                   </li>
                                 ),
                               )}
-                            </ul>
+                            </motion.ul>
 
-                            <div
-                              className={
-                                styles.badges
-                              }
+                            <motion.div
+                              className={styles.badges}
+                              variants={fadeUp}
                             >
                               {project.technologies.map(
                                 (
                                   technology,
                                 ) => (
-                                  <span
-                                    key={
-                                      technology
-                                    }
-                                    className={
-                                      styles.badge
-                                    }
+                                  <motion.span
+                                    key={technology}
+                                    className={styles.badge}
+                                    variants={fadeUp}
                                   >
                                     {
                                       technology
                                     }
-                                  </span>
+                                  </motion.span>
                                 ),
                               )}
-                            </div>
-                          </div>
+                            </motion.div>
+                          </motion.div>
                         );
                       },
                     )}
-                  </div>
-                </article>
+                  </motion.div>
+                </motion.article>
               ),
             )}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
     );
   };
