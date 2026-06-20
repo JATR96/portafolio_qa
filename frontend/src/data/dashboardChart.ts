@@ -6,12 +6,12 @@ export const coverageTrend:
   DashboardChartPoint[] = [
     {
       month: 'Jan',
-      coverage: 80,
+      coverage: 75,
     },
 
     {
       month: 'Feb',
-      coverage: 84,
+      coverage: 24,
     },
 
     {
@@ -21,11 +21,11 @@ export const coverageTrend:
 
     {
       month: 'Apr',
-      coverage: 93,
+      coverage: 63,
     },
 
     {
       month: 'May',
-      coverage: 98,
+      coverage: 80,
     },
   ];

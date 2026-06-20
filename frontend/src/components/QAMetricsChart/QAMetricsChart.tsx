@@ -10,37 +10,35 @@ const QAMetricsChart =
     const maxValue = 100;
 
     return (
-      <div
-        className={styles.chart}
-      >
-        {coverageTrend.map(
-          (point) => (
-            <div
-              key={point.month}
-              className={
-                styles.column
-              }
-            >
-              <div
+        <div
+            className={styles.chart}
+        >
+            {coverageTrend.map(
+            (point) => (
+                <div
+                key={point.month}
                 className={
-                  styles.bar
+                    styles.column
                 }
-                style={{
-                  height: `${
-                    (point.coverage /
-                      maxValue) *
-                    100
-                  }%`,
-                }}
-              />
-
-              <span>
-                {point.month}
-              </span>
-            </div>
-          ),
-        )}
-      </div>
+                >
+                    <div
+                        className={styles.bar}
+                        style={{
+                        height: `${
+                            (point.coverage /
+                            maxValue) *
+                            100
+                        }%`,
+                        }}
+                    >
+                    </div>
+                    <span>
+                        {point.month}
+                    </span>
+                </div>
+            ),
+            )}
+        </div>
     );
   };
 
