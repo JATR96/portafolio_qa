@@ -6,6 +6,9 @@ import {
 import PageLoader
   from '@components/PageLoader/PageLoader';
 
+import SectionReveal
+  from '@components/SectionReveal/SectionReveal';  
+
 import styles from './HomePage.module.scss';
 
 const Hero = lazy(
@@ -71,24 +74,36 @@ const HomePage =
         id="home"
         className={styles.home}
       >
-        <Suspense
-          fallback={<PageLoader />}
-        >
+        <Suspense fallback={<PageLoader />}>
           <Hero />
 
-          <About />
+          <SectionReveal>
+            <About />
+          </SectionReveal>
 
-          <Skills />
+          <SectionReveal>
+            <Skills />
+          </SectionReveal>
 
-          <Experience />
+          <SectionReveal>
+            <Experience />
+          </SectionReveal>
 
-          <Projects />
+          <SectionReveal>
+            <Projects />
+          </SectionReveal>
 
-          <Dashboard />
+          <SectionReveal>
+            <Dashboard />
+          </SectionReveal>
 
-          <Certifications />
+          <SectionReveal>
+            <Certifications />
+          </SectionReveal>
 
-          <Contact />
+          <SectionReveal>
+            <Contact />
+          </SectionReveal>
         </Suspense>
       </main>
     );

@@ -17,6 +17,11 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
     href: '#skills',
   },
   {
+    id: 'experience',
+    translationKey: 'experience',
+    href: '#experience',
+  },
+  {
     id: 'projects',
     translationKey: 'projects',
     href: '#projects',
