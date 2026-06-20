@@ -1,0 +1,53 @@
+.button {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 999;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid
+    var(--border-color);
+  background:
+    var(--card-background);
+  color:
+    var(--text-primary);
+  cursor: pointer;
+  box-shadow:
+    0 10px 30px
+    rgba(0, 0, 0, 0.2);
+  transition:
+    transform
+      var(--transition-normal),
+    border-color
+      var(--transition-normal),
+    background
+      var(--transition-normal);
+}
+
+.button:hover {
+  transform:
+    translateY(-4px);
+  border-color:
+    var(--color-primary);
+  color:
+    var(--color-primary);
+}
+
+.button:focus-visible {
+  outline: 2px solid
+    var(--color-primary);
+  outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  .button {
+    right: 16px;
+    bottom: 16px;
+    width: 48px;
+    height: 48px;
+  }
+}

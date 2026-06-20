@@ -4,6 +4,9 @@ import AppRouter
 import ScrollToTop
   from '@components/ScrollToTop/ScrollToTop';
 
+import BackToTop
+  from '@components/BackToTop/BackToTop';
+
 const App =
   (): React.JSX.Element => {
     return (
@@ -11,6 +14,8 @@ const App =
         <ScrollToTop />
 
         <AppRouter />
+
+        <BackToTop />
       </>
     );
   };
