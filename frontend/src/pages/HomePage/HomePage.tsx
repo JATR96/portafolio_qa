@@ -1,45 +1,97 @@
-import Hero from '@sections/Hero/Hero';
+import {
+  lazy,
+  Suspense,
+} from 'react';
 
-import About from '@sections/About/About';
+import PageLoader
+  from '@components/PageLoader/PageLoader';
 
-import Skills from '@sections/Skills/Skills';
+import styles from './HomePage.module.scss';
 
-import Experience from '@sections/Experience/Experience';
+const Hero = lazy(
+  () =>
+    import(
+      '@sections/Hero/Hero'
+    ),
+);
 
-import Projects from '@sections/Projects/Projects';
+const About = lazy(
+  () =>
+    import(
+      '@sections/About/About'
+    ),
+);
 
-import Dashboard from '@sections/Dashboard/Dashboard';
+const Skills = lazy(
+  () =>
+    import(
+      '@sections/Skills/Skills'
+    ),
+);
 
-import Certifications from '@sections/Certifications/Certifications';
+const Experience = lazy(
+  () =>
+    import(
+      '@sections/Experience/Experience'
+    ),
+);
 
-import Contact from '@sections/Contact/Contact';
+const Projects = lazy(
+  () =>
+    import(
+      '@sections/Projects/Projects'
+    ),
+);
 
-import Footer from '@components/Footer/Footer';
+const Dashboard = lazy(
+  () =>
+    import(
+      '@sections/Dashboard/Dashboard'
+    ),
+);
 
-import SEO from '@components/SEO/SEO';
+const Certifications = lazy(
+  () =>
+    import(
+      '@sections/Certifications/Certifications'
+    ),
+);
 
-const HomePage = (): React.JSX.Element => {
-  return (
-    <>
-      <SEO
-        title="JATR QA | QA Automation Engineer"
-        description="QA Automation Engineer especializado en Playwright, API Testing, Performance Testing y Quality Engineering."
-      />
-      
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Dashboard />
-        <Certifications />
-        <Contact />
+const Contact = lazy(
+  () =>
+    import(
+      '@sections/Contact/Contact'
+    ),
+);
+
+const HomePage =
+  (): React.JSX.Element => {
+    return (
+      <main
+        id="home"
+        className={styles.home}
+      >
+        <Suspense
+          fallback={<PageLoader />}
+        >
+          <Hero />
+
+          <About />
+
+          <Skills />
+
+          <Experience />
+
+          <Projects />
+
+          <Dashboard />
+
+          <Certifications />
+
+          <Contact />
+        </Suspense>
       </main>
-
-      <Footer />
-    </>
-  );
-};
+    );
+  };
 
 export default HomePage;
