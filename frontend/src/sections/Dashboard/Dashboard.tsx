@@ -107,9 +107,15 @@ const Dashboard =
                       }
                     >
                       {metric.trend === 'up' ? (
-                        <TrendingUp size={16} />
+                        <TrendingUp 
+                          size={16} 
+                          aria-hidden="true"
+                        />
                       ) : (
-                        <TrendingDown size={16} />
+                        <TrendingDown 
+                          size={16} 
+                          aria-hidden="true"
+                        />
                       )}
 
                       {metric.trendValue}

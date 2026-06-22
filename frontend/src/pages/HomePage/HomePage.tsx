@@ -71,7 +71,7 @@ const HomePage =
   (): React.JSX.Element => {
     return (
       <main
-        id="home"
+        id="main-content"
         className={styles.home}
       >
         <Suspense fallback={<PageLoader />}>

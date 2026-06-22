@@ -1,6 +1,9 @@
 import AppRouter
   from '@routes/index';
 
+import SkipLink
+  from '@components/SkipLink/SkipLink';
+
 import ScrollToTop
   from '@components/ScrollToTop/ScrollToTop';
 
@@ -11,6 +14,8 @@ const App =
   (): React.JSX.Element => {
     return (
       <>
+        <SkipLink />
+
         <ScrollToTop />
 
         <AppRouter />

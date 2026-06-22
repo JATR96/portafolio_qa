@@ -64,7 +64,10 @@ const BackToTop =
         }
         onClick={handleClick}
       >
-        <ChevronUp size={22} />
+        <ChevronUp 
+          size={22} 
+          aria-hidden="true"
+        />
       </button>
     );
   };

@@ -38,7 +38,9 @@ const Navbar = () => {
             JATR QA
           </a>
 
-          <nav className={styles.navigation}>
+          <nav 
+            aria-label="Primary navigation"
+            className={styles.navigation}>
             {NAVIGATION_ITEMS.map((item) => (
               <a
                 key={item.id}
@@ -62,7 +64,10 @@ const Navbar = () => {
               aria-label="GitHub"
               className={styles.iconButton}
             >
-              <GitCompareArrows size={18} />
+              <GitCompareArrows 
+                size={18} 
+                aria-hidden="true"
+              />
             </a>
 
             <a
@@ -72,7 +77,10 @@ const Navbar = () => {
               aria-label="LinkedIn"
               className={styles.iconButton}
             >
-              <Contact size={18} />
+              <Contact 
+                size={18}
+                aria-hidden="true" 
+              />
             </a>
 
             <button
@@ -81,7 +89,10 @@ const Navbar = () => {
               className={styles.mobileButton}
               onClick={handleToggleMenu}
             >
-              <Menu size={22} />
+              <Menu 
+                size={22} 
+                aria-hidden="true"
+              />
             </button>
           </div>
         </div>
